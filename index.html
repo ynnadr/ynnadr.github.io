@@ -1,89 +1,87 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id"> <!-- Atribut lang akan diubah oleh JS -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama Anda - Portofolio</title> <!-- Ganti "Nama Anda" -->
-    <meta name="description" content="Portofolio web developer Nama Anda, menampilkan proyek-proyek terkini."> <!-- Ganti deskripsi singkat -->
+    <!-- Judul dan deskripsi akan diisi oleh JS, tapi beri fallback -->
+    <title data-translate="site_title">Nama Anda - Portofolio</title>
+    <meta name="description" content="Portofolio web developer Nama Anda..." data-translate="meta_description">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Opsional: Tambahkan link Google Fonts jika diinginkan -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- === Language Switcher === -->
+    <div class="language-switcher">
+        <img src="assets/flags/id.svg" alt="Bahasa Indonesia" class="lang-flag" data-lang="id">
+        <img src="assets/flags/gb.svg" alt="English" class="lang-flag" data-lang="en">
+    </div>
+    <!-- === End Language Switcher === -->
+
     <header class="hero">
         <div class="container">
-             <!-- Opsional: Gambar Profil -->
              <!-- <img src="assets/images/profile.jpg" alt="Foto Profil Nama Anda" class="profile-pic"> -->
-            <h1>Nama Anda</h1> <!-- Ganti Nama Anda -->
-            <h2>Web Developer & Desainer Kreatif</h2> <!-- Ganti dengan jabatan/deskripsi singkat Anda -->
-            <p class="intro">
-                Selamat datang di portofolio digital saya. Saya bersemangat tentang pembuatan web yang bersih, fungsional, dan menarik secara visual. Jelajahi beberapa proyek yang telah saya kerjakan di bawah ini.
+            <h1 data-translate="hero_greeting">Nama Anda</h1>
+            <h2 data-translate="hero_job_title">Web Developer & Desainer Kreatif</h2>
+            <p class="intro" data-translate="hero_intro">
+                Selamat datang di portofolio digital saya...
             </p>
-             <!-- Opsional: Tombol Kontak atau Link CV -->
-             <!-- <a href="#kontak" class="btn">Hubungi Saya</a> -->
-             <!-- <a href="path/to/cv.pdf" class="btn btn-secondary" target="_blank">Unduh CV</a> -->
+             <!-- <a href="#kontak" class="btn" data-translate="contact_button">Hubungi Saya</a> -->
+             <!-- <a href="path/to/cv.pdf" class="btn btn-secondary" target="_blank" data-translate="cv_button">Unduh CV</a> -->
         </div>
     </header>
 
     <main>
         <section id="portfolio" class="portfolio-section">
             <div class="container">
-                <h2>Proyek Saya</h2>
+                <h2 data-translate="section_portfolio_title">Proyek Saya</h2>
                 <div class="portfolio-grid">
 
-                    <!-- === KARTU PROYEK 1 === -->
-                    <article class="project-card">
-                        <!-- <img src="assets/images/project1-thumb.jpg" alt="Thumbnail Proyek 1" class="project-thumb"> -->
-                        <div class="card-content">
-                            <h3>Nama Proyek Keren 1</h3>
-                            <p>Deskripsi singkat mengenai proyek ini, teknologi yang digunakan, atau tantangan yang dihadapi.</p>
-                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-1]/" target="_blank" class="btn">
-                                Kunjungi Situs <!-- Atau "Lihat Kode" jika link ke repo -->
-                            </a>
-                            <!-- <a href="link-ke-repo-github" target="_blank" class="btn btn-secondary">Lihat Kode</a> -->
-                        </div>
-                    </article>
-                    <!-- === END KARTU PROYEK 1 === -->
-
-                    <!-- === KARTU PROYEK 2 === -->
+                    <!-- KARTU PROYEK 1 -->
                     <article class="project-card">
                         <div class="card-content">
-                            <h3>Nama Proyek Lain 2</h3>
-                            <p>Ini adalah proyek lain yang menunjukkan keahlian saya dalam [sebutkan keahlian, misal: CSS Grid, JavaScript].</p>
-                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-2]/" target="_blank" class="btn">
+                            <h3 data-translate="project1_title">Nama Proyek Keren 1</h3>
+                            <p data-translate="project1_desc">Deskripsi singkat...</p>
+                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-1]/" target="_blank" class="btn" data-translate="project1_button">
                                 Kunjungi Situs
                             </a>
                         </div>
                     </article>
-                    <!-- === END KARTU PROYEK 2 === -->
 
-                    <!-- === KARTU PROYEK 3 === -->
+                    <!-- KARTU PROYEK 2 -->
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3 data-translate="project2_title">Nama Proyek Lain 2</h3>
+                            <p data-translate="project2_desc">Ini adalah proyek lain...</p>
+                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-2]/" target="_blank" class="btn" data-translate="project2_button">
+                                Kunjungi Situs
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- KARTU PROYEK 3 -->
                     <article class="project-card">
                          <div class="card-content">
-                            <h3>Proyek Eksperimental 3</h3>
-                            <p>Deskripsi untuk proyek ketiga. Mungkin ini adalah library atau tool kecil yang Anda buat.</p>
-                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-3]/" target="_blank" class="btn">
+                            <h3 data-translate="project3_title">Proyek Eksperimental 3</h3>
+                            <p data-translate="project3_desc">Deskripsi untuk proyek ketiga...</p>
+                            <a href="https://[nama-pengguna].github.io/[nama-repo-proyek-3]/" target="_blank" class="btn" data-translate="project3_button">
                                 Kunjungi Situs
                             </a>
                         </div>
                     </article>
-                    <!-- === END KARTU PROYEK 3 === -->
-
-                    <!-- Tambahkan lebih banyak <article class="project-card"> sesuai kebutuhan -->
-
-                </div> <!-- /.portfolio-grid -->
-            </div> <!-- /.container -->
+                    <!-- Tambahkan data-translate ke proyek lainnya -->
+                </div>
+            </div>
         </section>
 
         <!-- Opsional: Section "Tentang Saya" -->
         <!--
         <section id="about" class="about-section">
             <div class="container">
-                <h2>Tentang Saya</h2>
-                <p>Tulis beberapa paragraf tentang diri Anda, latar belakang, keahlian, atau minat Anda di sini...</p>
+                <h2 data-translate="section_about_title">Tentang Saya</h2>
+                <p data-translate="about_text">Tulis beberapa paragraf...</p>
             </div>
         </section>
         -->
@@ -92,12 +90,12 @@
         <!--
         <section id="kontak" class="contact-section">
             <div class="container">
-                <h2>Hubungi Saya</h2>
-                <p>Anda dapat menemukan saya di:</p>
+                <h2 data-translate="section_contact_title">Hubungi Saya</h2>
+                <p data-translate="contact_intro">Anda dapat menemukan saya di:</p>
                 <ul>
-                    <li><a href="https://github.com/[nama-pengguna]" target="_blank">GitHub</a></li>
-                    <li><a href="[link-linkedin]" target="_blank">LinkedIn</a></li>
-                    <li>Email: <a href="mailto:emailanda@example.com">emailanda@example.com</a></li>
+                    <li><a href="https://github.com/[nama-pengguna]" target="_blank" data-translate="contact_github">GitHub</a></li>
+                    <li><a href="[link-linkedin]" target="_blank" data-translate="contact_linkedin">LinkedIn</a></li>
+                    <li><span data-translate="contact_email">Email:</span> <a href="mailto:emailanda@example.com">emailanda@example.com</a></li>
                 </ul>
             </div>
         </section>
@@ -107,7 +105,7 @@
 
     <footer>
         <div class="container">
-            <p>© <span id="year"></span> Nama Anda. Hak Cipta Dilindungi.</p> <!-- Ganti Nama Anda -->
+            <p>© <span id="year"></span> <span data-translate="hero_greeting">Nama Anda</span>. <span data-translate="footer_text">Hak Cipta Dilindungi.</span></p>
         </div>
     </footer>
 
