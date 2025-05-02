@@ -288,3 +288,50 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+/* ... (Semua CSS Anda yang sudah ada) ... */
+
+/* === Language Switcher === */
+.language-switcher {
+    position: absolute; /* Atau 'fixed' jika ingin tetap terlihat saat scroll */
+    top: 15px;
+    right: 20px;
+    z-index: 10; /* Pastikan di atas elemen lain */
+}
+
+.lang-flag {
+    width: 30px; /* Sesuaikan ukuran bendera */
+    height: auto;
+    cursor: pointer;
+    margin-left: 8px;
+    border-radius: 3px; /* Sedikit lengkungan */
+    opacity: 0.7; /* Sedikit transparan untuk yang tidak aktif */
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    border: 1px solid transparent; /* Border awal transparan */
+}
+
+.lang-flag:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+.lang-flag.active-lang {
+    opacity: 1;
+    border: 1px solid var(--accent-color); /* Beri border pada bendera aktif */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Sedikit glow */
+}
+
+
+/* ... (Sisa CSS Anda) ... */
+
+/* === Penyesuaian Responsif untuk Language Switcher === */
+@media (max-width: 480px) {
+    .language-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    .lang-flag {
+        width: 25px;
+        margin-left: 5px;
+    }
+}
